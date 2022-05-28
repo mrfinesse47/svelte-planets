@@ -2,16 +2,27 @@
 </script>
 
 <header>
-  <h1>THE PLANETS</h1>
-  <img src="./img/icon-hamburger.svg" alt="" />
+  <div class="container">
+    <h1>THE PLANETS</h1>
+    <img src="./img/icon-hamburger.svg" alt="menu" />
+  </div>
 </header>
 
 <style>
-  img {
-    width: 20px;
-    height: 20px;
-  }
   header {
-    background-color: black;
+    margin: 16px 24px;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  img {
+    width: 1.5rem;
+    height: 1.0625rem;
+  }
+  h1 {
+    color: #fff;
+    font-size: 28px;
   }
 </style>
