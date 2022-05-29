@@ -1,5 +1,7 @@
 <script>
-  export let planetName;
+  export let planet;
 </script>
+
+<li>{planet.name}</li>
 
 <style></style>

@@ -3,6 +3,6 @@
   //will have a view controller for the tabs overview, structure, and surface
 </script>
 
-<main />
+<li />
 
 <style></style>

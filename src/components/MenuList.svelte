@@ -10,16 +10,13 @@
 </script>
 
 <!-- <div transition:slide></div> -->
-<div class:hidden={true}>
+<div class:hidden={false}>
   <ul>
-    <li>MERCURY</li>
-    <li>VENUS</li>
-    <li>EARTH</li>
-    <li>MARS</li>
-    <li>JUPITER</li>
-    <li>SATURN</li>
-    <li>URANUS</li>
-    <li>NEPTUNE</li>
+    {#each planets as planet}
+      <li>
+        <MenuListItem {planet} />
+      </li>
+    {/each}
   </ul>
 </div>
 
