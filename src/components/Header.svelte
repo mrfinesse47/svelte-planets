@@ -13,7 +13,8 @@
 
 <style>
   header {
-    margin: 16px 24px;
+    position: relative;
+    border: 1px solid red;
   }
   .container {
     display: flex;
