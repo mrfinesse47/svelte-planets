@@ -1,10 +1,16 @@
 <script>
+  import MenuListItem from "./MenuListItem.svelte";
+  export let planets;
+
+  //console.log(planets);
+  // import { slide } from 'svelte/transition';
   //need to iterate over json file
   //and seed the list by planet name
   //then on click send and event to change the view of main to show a planet
 </script>
 
-<div>
+<!-- <div transition:slide></div> -->
+<div class:hidden={true}>
   <ul>
     <li>MERCURY</li>
     <li>VENUS</li>
@@ -27,5 +33,8 @@
     height: 80vh;
     top: 100%;
     /* top 100% is 100% of the parents height */
+  }
+  .hidden {
+    display: none;
   }
 </style>

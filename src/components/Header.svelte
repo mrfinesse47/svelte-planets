@@ -6,7 +6,7 @@
 <header>
   <div class="container">
     <h1>THE PLANETS</h1>
-    <MenuList />
+    <MenuList {planets} />
     <img src="./img/icon-hamburger.svg" alt="menu" />
   </div>
 </header>
@@ -25,10 +25,11 @@
     width: 1.5rem;
     height: 1.0625rem;
   }
+  img:hover {
+    cursor: pointer;
+  }
   h1 {
     color: #fff;
     font-size: 1.75rem;
-    font-family: "Antonio", sans-serif;
-    font-weight: 400;
   }
 </style>
