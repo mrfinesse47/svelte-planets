@@ -30,6 +30,11 @@
   }
   h1 {
     color: #fff;
+    font-weight: 400;
     font-size: 1.75rem;
+    line-height: 2.25rem;
+    letter-spacing: -0.0656rem;
+    text-transform: uppercase;
+    margin-left: 1.25rem;
   }
 </style>

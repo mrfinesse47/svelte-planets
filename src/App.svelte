@@ -5,6 +5,7 @@
 
   let planets = [];
   let isLoading = true;
+  let selecctedPlanetName = "Mercury";
 
   onMount(async () => {
     const res = await fetch(`./data.json`);

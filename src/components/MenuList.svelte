@@ -2,10 +2,7 @@
   import MenuListItem from "./MenuListItem.svelte";
   export let planets;
 
-  //console.log(planets);
-  // import { slide } from 'svelte/transition';
-  //need to iterate over json file
-  //and seed the list by planet name
+  //import { slide } from 'svelte/transition';
   //then on click send and event to change the view of main to show a planet
 </script>
 
@@ -23,7 +20,6 @@
 <style>
   div {
     position: absolute;
-    background-color: red;
     padding: 0;
     margin: 0;
     width: 100%;
