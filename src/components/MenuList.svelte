@@ -15,4 +15,8 @@
   <li>NEPTUNE</li>
 </ul>
 
-<style></style>
+<style>
+  ul {
+    /* position: absolute; */
+  }
+</style>

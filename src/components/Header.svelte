@@ -1,9 +1,12 @@
 <script>
+  import MenuList from "./MenuList.svelte";
+  export let planets;
 </script>
 
 <header>
   <div class="container">
     <h1>THE PLANETS</h1>
+    <MenuList />
     <img src="./img/icon-hamburger.svg" alt="menu" />
   </div>
 </header>
@@ -24,5 +27,7 @@
   h1 {
     color: #fff;
     font-size: 1.75rem;
+    font-family: "Antonio", sans-serif;
+    font-weight: 400;
   }
 </style>
