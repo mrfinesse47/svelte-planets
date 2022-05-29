@@ -23,6 +23,6 @@
   }
   h1 {
     color: #fff;
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 </style>
