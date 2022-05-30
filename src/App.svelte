@@ -32,12 +32,9 @@
 {#if !isLoading}
   <Header
     {planets}
-    {isMenuOpen}
+    bind:isMenuOpen
     on:planetSelect={(e) => {
       selectPlanet(e);
-    }}
-    on:toggleMenu={() => {
-      isMenuOpen = !isMenuOpen;
     }}
   />
   <Planet {selectedPlanet} />

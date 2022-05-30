@@ -1,13 +1,10 @@
 <script>
-  import { createEventDispatcher } from "svelte";
   import MenuList from "./MenuList.svelte";
   export let planets;
-  export let isMenuOpen;
-
-  const dispatch = createEventDispatcher();
+  export let isMenuOpen; //bound one level up at app
 
   function toggleMenu() {
-    dispatch("toggleMenu");
+    isMenuOpen = !isMenuOpen;
   }
 </script>
 
