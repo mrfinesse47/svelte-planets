@@ -1,13 +1,23 @@
 <script>
+  import { slide } from "svelte/transition";
   import MenuList from "./MenuList.svelte";
   export let planets;
+  let isMenuOpen = true;
+
+  const toggleIsMenuOpen = () => {
+    isMenuOpen = !isMenuOpen;
+  };
 </script>
 
 <header>
   <div class="container">
     <h1>THE PLANETS</h1>
-    <MenuList {planets} />
-    <img src="./img/icon-hamburger.svg" alt="menu" />
+    <MenuList {planets} {isMenuOpen} />
+    <img
+      src="./img/icon-hamburger.svg"
+      alt="menu"
+      on:click={toggleIsMenuOpen}
+    />
   </div>
 </header>
 

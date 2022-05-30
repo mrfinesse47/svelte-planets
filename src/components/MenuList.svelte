@@ -1,21 +1,23 @@
 <script>
+  import { slide } from "svelte/transition";
   import MenuListItem from "./MenuListItem.svelte";
   export let planets;
-
-  //import { slide } from 'svelte/transition';
-  //then on click send and event to change the view of main to show a planet
+  export let isMenuOpen = false;
 </script>
 
-<!-- <div transition:slide></div> -->
-<div class:hidden={false}>
-  <ul>
-    {#each planets as planet}
-      <li>
-        <MenuListItem {planet} />
-      </li>
-    {/each}
-  </ul>
-</div>
+{#if isMenuOpen}
+  <!-- to get transition to work i needed to conditionally render. 
+  CSS classes didn't work -->
+  <div transition:slide>
+    <ul>
+      {#each planets as planet}
+        <li>
+          <MenuListItem {planet} />
+        </li>
+      {/each}
+    </ul>
+  </div>
+{/if}
 
 <style>
   div {
@@ -26,8 +28,5 @@
     height: 80vh;
     top: 100%;
     /* top 100% is 100% of the parents height */
-  }
-  .hidden {
-    display: none;
   }
 </style>
