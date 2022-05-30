@@ -1,23 +1,21 @@
 <script>
-  import { slide } from "svelte/transition";
+  import { createEventDispatcher } from "svelte";
   import MenuList from "./MenuList.svelte";
   export let planets;
-  let isMenuOpen = true;
+  export let isMenuOpen;
 
-  const toggleIsMenuOpen = () => {
-    isMenuOpen = !isMenuOpen;
-  };
+  const dispatch = createEventDispatcher();
+
+  function toggleMenu() {
+    dispatch("toggleMenu");
+  }
 </script>
 
 <header>
   <div class="container">
     <h1>THE PLANETS</h1>
-    <MenuList {planets} {isMenuOpen} />
-    <img
-      src="./img/icon-hamburger.svg"
-      alt="menu"
-      on:click={toggleIsMenuOpen}
-    />
+    <MenuList {planets} {isMenuOpen} on:planetSelect />
+    <img src="./img/icon-hamburger.svg" alt="menu" on:click={toggleMenu} />
   </div>
 </header>
 
@@ -29,10 +27,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 16px 0px 17px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
   img {
     width: 1.5rem;
     height: 1.0625rem;
+    margin-right: 1.5rem;
   }
   img:hover {
     cursor: pointer;

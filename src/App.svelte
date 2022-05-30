@@ -5,20 +5,42 @@
 
   let planets = [];
   let isLoading = true;
-  let selecctedPlanetName = "Mercury";
+  let selectedPlanet;
+  let isMenuOpen = true;
 
   onMount(async () => {
     const res = await fetch(`./data.json`);
     planets = await res.json();
+    selectedPlanet = findPlanet("Mercury");
     isLoading = false;
   });
+
+  function selectPlanet(e) {
+    {
+      selectedPlanet = findPlanet(e.detail.planetName);
+      isMenuOpen = false;
+    }
+  }
+
+  function findPlanet(planetName) {
+    return planets.filter((planet) => planet.name === planetName)[0];
+  }
 
   //parse the data store in object then seed header and initial planet
 </script>
 
 {#if !isLoading}
-  <Header {planets} />
-  <Planet />
+  <Header
+    {planets}
+    {isMenuOpen}
+    on:planetSelect={(e) => {
+      selectPlanet(e);
+    }}
+    on:toggleMenu={() => {
+      isMenuOpen = !isMenuOpen;
+    }}
+  />
+  <Planet {selectedPlanet} />
 {:else}
   <p>loading...</p>
 {/if}

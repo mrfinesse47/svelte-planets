@@ -1,8 +1,17 @@
 <script>
+  import { createEventDispatcher } from "svelte";
   export let planet;
+
+  const dispatch = createEventDispatcher();
+
+  function select() {
+    dispatch("planetSelect", {
+      planetName: planet.name,
+    });
+  }
 </script>
 
-<li>
+<li on:click={select}>
   <div class="left-container">
     <div
       class="planet-color-circle"
@@ -10,7 +19,11 @@
     />
     <p>{planet.name}</p>
   </div>
-  <img src="./img/icon-chevron.svg" alt="chevron icon" class="chevron" />
+  <img
+    src="./img/icon-chevron.svg"
+    alt={`go to ${planet.name}`}
+    class="chevron"
+  />
 </li>
 
 <style>
@@ -26,15 +39,14 @@
     margin: 1.25rem 1.5rem;
     list-style: none;
     padding-bottom: 19px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
   li p {
     padding-top: 4.5px;
     display: block;
-    font-family: "League Spartan", sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.9375rem;
-    letter-spacing: 1.36364px;
+    letter-spacing: 0.1094rem;
     line-height: 1.5625rem;
   }
   .planet-color-circle {
