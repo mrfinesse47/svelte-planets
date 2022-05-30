@@ -6,7 +6,7 @@
   let planets = [];
   let isLoading = true;
   let selectedPlanet;
-  let isMenuOpen = true;
+  let isMenuOpen = false;
 
   onMount(async () => {
     const res = await fetch(`./data.json`);
