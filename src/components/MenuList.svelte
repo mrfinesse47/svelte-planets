@@ -21,6 +21,7 @@
 
 <style>
   div {
+    background-color: #070724;
     position: absolute;
     padding: 0;
     margin: 0;
@@ -28,5 +29,8 @@
     height: 80vh;
     top: 100%;
     /* top 100% is 100% of the parents height */
+  }
+  ul {
+    padding-top: 1.5rem;
   }
 </style>

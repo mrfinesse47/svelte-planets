@@ -24,7 +24,6 @@
 <style>
   header {
     position: relative;
-    border: 1px solid red;
   }
   .container {
     display: flex;
