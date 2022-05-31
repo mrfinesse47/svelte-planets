@@ -8,6 +8,6 @@
 
 <Tabs />
 
-<h1>{selectedPlanet.name}</h1>
-
+<!-- 
+<h1>{selectedPlanet.name}</h1> -->
 <style></style>
