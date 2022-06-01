@@ -6,8 +6,6 @@
 </script>
 
 {#if isMenuOpen}
-  <!-- to get svelge transition to work i needed to conditionally render. 
-  CSS classes didn't work -->
   <div transition:slide>
     <ul>
       {#each planets as planet}
