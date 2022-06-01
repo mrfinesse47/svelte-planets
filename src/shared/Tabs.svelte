@@ -8,7 +8,13 @@
 
 <ul>
   {#each tabs as tab}
-    <li id={tab} on:click={(e) => select(e)}>{tab}</li>
+    <li
+      id={tab}
+      class={tab === selectedTab && "selected"}
+      on:click={(e) => select(e)}
+    >
+      {tab}
+    </li>
   {/each}
 </ul>
 
@@ -32,7 +38,7 @@
   li:hover {
     cursor: pointer;
   }
-  li .selected {
-    color: #ffffff;
+  li.selected {
+    border-bottom: 4px solid #419ebb;
   }
 </style>
