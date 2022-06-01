@@ -33,5 +33,6 @@
   }
   ul {
     padding-top: 1.5rem;
+    list-style: none;
   }
 </style>

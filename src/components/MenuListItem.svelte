@@ -41,6 +41,9 @@
     padding-bottom: 19px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
+  li:hover {
+    cursor: pointer;
+  }
   li p {
     padding-top: 4.5px;
     display: block;

@@ -1,17 +1,20 @@
 <script>
-  export let tabs = ["overview", "structure", "geology"];
-  //hard coded for now
+  export let tabs;
+  export let selectedTab = tabs[0];
+  function select(e) {
+    selectedTab = e.target.id;
+  }
 </script>
 
 <ul>
   {#each tabs as tab}
-    <li>{tab}</li>
+    <li id={tab} on:click={(e) => select(e)}>{tab}</li>
   {/each}
 </ul>
 
 <style>
   ul {
-    padding: 20px 24px 17px;
+    padding: 0px 24px 0px;
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -24,7 +27,10 @@
     text-align: center;
     letter-spacing: 0.1205rem;
     text-transform: uppercase;
-    padding: 0 0.2rem;
+    padding: 20px 0.2rem 17px;
+  }
+  li:hover {
+    cursor: pointer;
   }
   li .selected {
     color: #ffffff;
