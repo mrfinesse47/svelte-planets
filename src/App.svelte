@@ -11,7 +11,7 @@
   onMount(async () => {
     const res = await fetch(`./data.json`);
     planets = await res.json();
-    selectedPlanet = findPlanet("Jupiter");
+    selectedPlanet = findPlanet("Mercury");
     isLoading = false;
   });
 
