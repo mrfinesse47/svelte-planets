@@ -1,6 +1,7 @@
 <script>
   export let selectedPlanet;
   import Tabs from "../shared/Tabs.svelte";
+  import NumericInfo from "../components/NumericInfo.svelte";
   let tabs = ["overview", "structure", "geology"];
   let selectedTab;
   console.log(selectedPlanet);
@@ -28,12 +29,7 @@
   </div>
 </div>
 
-<div class="numeric-info">
-  <div class="rotation-time">{selectedPlanet.rotation}</div>
-  <div class="revolution-time">{selectedPlanet.revolution}</div>
-  <div class="radius">{selectedPlanet.radius}</div>
-  <div class="average-temp">{selectedPlanet.temperature}</div>
-</div>
+<NumericInfo {selectedPlanet} />
 
 <style>
   .container {
@@ -46,6 +42,7 @@
   .planet-image {
     transform: scale(0.38487973);
   }
+
   .blurb-container h2 {
     text-align: center;
     text-transform: uppercase;
@@ -55,25 +52,19 @@
     font-family: "spartan", sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 11px;
-    line-height: 22px;
+    font-size: 0.6875rem;
+    line-height: 1.375rem;
     margin-top: 1rem;
   }
   .blurb-container h3 {
     opacity: 0.5;
     text-align: center;
-    margin-top: 32px;
+    margin-top: 2rem;
     font-weight: 400;
   }
   .blurb-container h3 a {
     text-decoration: none;
     font-weight: 700;
     color: #fff;
-  }
-  .numeric-info {
-    display: flex;
-  }
-  .numeric-info div {
-    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 </style>
