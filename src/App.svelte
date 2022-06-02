@@ -37,7 +37,9 @@
       selectPlanet(e);
     }}
   />
-  <Planet {selectedPlanet} />
+  <div class="hider" style={isMenuOpen && "display:none"}>
+    <Planet {selectedPlanet} />
+  </div>
 {:else}
   <p>loading...</p>
 {/if}
