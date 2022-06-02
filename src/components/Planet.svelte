@@ -4,11 +4,12 @@
   import Tabs from "../shared/Tabs.svelte";
   import NumericInfo from "../components/NumericInfo.svelte";
   import MediaQuery from "../shared/MediaQuery.svelte";
+  import Blurb from "./Blurb.svelte";
   let tabs = ["overview", "structure", "geology"];
   let selectedTab;
 </script>
 
-<MediaQuery query="(max-width: 768px)" let:matches>
+<MediaQuery query="(max-width: 767px)" let:matches>
   {#if matches}
     <Tabs {tabs} bind:selectedTab planetColor={selectedPlanet.color} />
   {/if}
@@ -23,26 +24,13 @@
     />
   </div>
 
-  <div class="blub-outer-container">
-    <div class="blurb-container">
-      <h2>{selectedPlanet.name}</h2>
-      <p>{selectedPlanet.overview.content}</p>
-      <div class="source">
-        <h3>
-          Source: <a href="http://www.wikipedia.org"
-            >Wikipedia <img src="./img/icon-source.svg" alt="Wikipedia" /></a
-          >
-        </h3>
-      </div>
-    </div>
-
-    <MediaQuery query="(min-width: 769px)" let:matches>
+  <Blurb {selectedPlanet} {selectedTab}>
+    <MediaQuery query="(min-width: 768px)" let:matches>
       {#if matches}
         <Tabs {tabs} bind:selectedTab planetColor={selectedPlanet.color} />
       {/if}
-    </MediaQuery>
-  </div>
-
+    </MediaQuery></Blurb
+  >
   <NumericInfo {selectedPlanet} />
 </main>
 
@@ -61,30 +49,5 @@
   }
   .planet-image {
     transform: scale(0.38487973);
-  }
-
-  .blurb-container h2 {
-    text-align: center;
-    text-transform: uppercase;
-  }
-  .blurb-container p {
-    text-align: center;
-    font-family: "spartan", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 0.6875rem;
-    line-height: 1.375rem;
-    margin-top: 1rem;
-  }
-  .blurb-container h3 {
-    opacity: 0.5;
-    text-align: center;
-    margin-top: 2rem;
-    font-weight: 400;
-  }
-  .blurb-container h3 a {
-    text-decoration: none;
-    font-weight: 700;
-    color: #fff;
   }
 </style>
