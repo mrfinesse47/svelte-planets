@@ -1,6 +1,6 @@
 <script>
   export let tabs;
-  export let selectedTab = tabs[0];
+  export let selectedTab;
   function select(e) {
     selectedTab = e.target.id;
   }

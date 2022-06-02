@@ -37,7 +37,7 @@
       selectPlanet(e);
     }}
   />
-  <div class="hider" style={isMenuOpen && "display:none"}>
+  <div style={isMenuOpen && "display:none"}>
     <Planet {selectedPlanet} />
   </div>
 {:else}

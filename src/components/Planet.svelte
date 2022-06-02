@@ -1,18 +1,15 @@
 <script>
   export let selectedPlanet;
-
   import Tabs from "../shared/Tabs.svelte";
   import NumericInfo from "../components/NumericInfo.svelte";
   import MediaQuery from "../shared/MediaQuery.svelte";
   import Blurb from "./Blurb.svelte";
   let tabs = ["overview", "structure", "geology"];
-  let selectedTab;
+  let selectedTab = tabs[0];
 </script>
 
-<MediaQuery query="(max-width: 767px)" let:matches>
-  {#if matches}
-    <Tabs {tabs} bind:selectedTab planetColor={selectedPlanet.color} />
-  {/if}
+<MediaQuery query="(max-width: 767px)">
+  <Tabs {tabs} bind:selectedTab planetColor={selectedPlanet.color} />
 </MediaQuery>
 
 <main>
@@ -25,10 +22,8 @@
   </div>
 
   <Blurb {selectedPlanet} {selectedTab}>
-    <MediaQuery query="(min-width: 768px)" let:matches>
-      {#if matches}
-        <Tabs {tabs} bind:selectedTab planetColor={selectedPlanet.color} />
-      {/if}
+    <MediaQuery query="(min-width: 768px)">
+      <Tabs {tabs} bind:selectedTab planetColor={selectedPlanet.color} />
     </MediaQuery></Blurb
   >
   <NumericInfo {selectedPlanet} />

@@ -1,17 +1,12 @@
 <script>
   export let selectedPlanet;
   export let selectedTab;
-  const determineParagraph = (selectedTab) => {
-    if (selectedTab === "overview") return selectedPlanet.overview.content;
-    if (selectedTab === "structure") return selectedPlanet.structure.content;
-    if (selectedTab === "geology") return selectedPlanet.geology.content;
-  };
 </script>
 
 <div class="blub-outer-container">
   <div class="blurb-container">
     <h2>{selectedPlanet.name}</h2>
-    <p>{determineParagraph(selectedTab)}</p>
+    <p>{selectedPlanet[selectedTab].content}</p>
     <div class="source">
       <h3>
         Source: <a href="http://www.wikipedia.org"
