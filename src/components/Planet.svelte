@@ -4,6 +4,7 @@
   import NumericInfo from "../components/NumericInfo.svelte";
   import MediaQuery from "../shared/MediaQuery.svelte";
   import Blurb from "./Blurb.svelte";
+  import PlanetImage from "./PlanetImage.svelte";
   let tabs = ["overview", "structure", "geology"];
   let selectedTab = tabs[0];
 </script>
@@ -13,19 +14,12 @@
 </MediaQuery>
 
 <main>
-  <div class="image-container">
-    <img
-      src={`./img/planet-${selectedPlanet.name.toLowerCase()}.svg`}
-      alt={selectedPlanet.name}
-      class="planet-image"
-    />
-  </div>
-
+  <PlanetImage {selectedPlanet} />
   <Blurb {selectedPlanet} {selectedTab}>
     <MediaQuery query="(min-width: 768px)">
       <Tabs {tabs} bind:selectedTab planetColor={selectedPlanet.color} />
-    </MediaQuery></Blurb
-  >
+    </MediaQuery>
+  </Blurb>
   <NumericInfo {selectedPlanet} />
 </main>
 
@@ -33,16 +27,5 @@
   main {
     max-width: 450px;
     margin: 0 auto;
-  }
-
-  .image-container {
-    margin: 0 1.5rem;
-    height: 19rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .planet-image {
-    transform: scale(0.38487973);
   }
 </style>
