@@ -2,12 +2,17 @@
   export let selectedPlanet;
   import Tabs from "../shared/Tabs.svelte";
   import NumericInfo from "../components/NumericInfo.svelte";
+  import MediaQuery from "../shared/MediaQuery.svelte";
   let tabs = ["overview", "structure", "geology"];
   let selectedTab;
   console.log(selectedPlanet);
 </script>
 
-<Tabs {tabs} bind:selectedTab />
+<MediaQuery query="(max-width: 768px)" let:matches>
+  {#if matches}
+    <Tabs {tabs} bind:selectedTab />
+  {/if}
+</MediaQuery>
 
 <div class="container">
   <img
@@ -17,16 +22,24 @@
   />
 </div>
 
-<div class="blurb-container">
-  <h2>{selectedPlanet.name}</h2>
-  <p>{selectedPlanet.overview.content}</p>
-  <div class="source">
-    <h3>
-      Source: <a href="http://www.wikipedia.org"
-        >Wikipedia <img src="./img/icon-source.svg" alt="Wikipedia" /></a
-      >
-    </h3>
+<div class="blub-outer-container">
+  <div class="blurb-container">
+    <h2>{selectedPlanet.name}</h2>
+    <p>{selectedPlanet.overview.content}</p>
+    <div class="source">
+      <h3>
+        Source: <a href="http://www.wikipedia.org"
+          >Wikipedia <img src="./img/icon-source.svg" alt="Wikipedia" /></a
+        >
+      </h3>
+    </div>
   </div>
+
+  <MediaQuery query="(min-width: 769px)" let:matches>
+    {#if matches}
+      <Tabs {tabs} bind:selectedTab />
+    {/if}
+  </MediaQuery>
 </div>
 
 <NumericInfo {selectedPlanet} />
