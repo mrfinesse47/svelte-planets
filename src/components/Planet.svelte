@@ -5,12 +5,6 @@
   let selectedTab;
 
   const lowercasePlanetName = selectedPlanet.name.toLowerCase();
-
-  console.log(selectedPlanet);
-
-  //console.log(selectedPlanet);
-  //planet data will come in via props
-  //will have a view controller for the tabs overview, structure, and surface
 </script>
 
 <Tabs {tabs} bind:selectedTab />
@@ -18,7 +12,7 @@
 <div class="container">
   <img
     src={`./img/planet-${lowercasePlanetName}.svg`}
-    alt=""
+    alt={selectedPlanet.name}
     class="planet-image"
   />
 </div>
@@ -27,7 +21,11 @@
 <h1>{selectedPlanet.name}</h1> -->
 <style>
   .container {
-    margin: 0 24px;
+    margin: 0 1.5rem;
+    height: 28.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .planet-image {
     transform: scale(0.38487973);
