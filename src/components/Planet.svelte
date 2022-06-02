@@ -1,51 +1,58 @@
 <script>
   export let selectedPlanet;
+
   import Tabs from "../shared/Tabs.svelte";
   import NumericInfo from "../components/NumericInfo.svelte";
   import MediaQuery from "../shared/MediaQuery.svelte";
   let tabs = ["overview", "structure", "geology"];
   let selectedTab;
-  console.log(selectedPlanet);
 </script>
 
 <MediaQuery query="(max-width: 768px)" let:matches>
   {#if matches}
-    <Tabs {tabs} bind:selectedTab />
+    <Tabs {tabs} bind:selectedTab planetColor={selectedPlanet.color} />
   {/if}
 </MediaQuery>
 
-<div class="container">
-  <img
-    src={`./img/planet-${selectedPlanet.name.toLowerCase()}.svg`}
-    alt={selectedPlanet.name}
-    class="planet-image"
-  />
-</div>
-
-<div class="blub-outer-container">
-  <div class="blurb-container">
-    <h2>{selectedPlanet.name}</h2>
-    <p>{selectedPlanet.overview.content}</p>
-    <div class="source">
-      <h3>
-        Source: <a href="http://www.wikipedia.org"
-          >Wikipedia <img src="./img/icon-source.svg" alt="Wikipedia" /></a
-        >
-      </h3>
-    </div>
+<main>
+  <div class="image-container">
+    <img
+      src={`./img/planet-${selectedPlanet.name.toLowerCase()}.svg`}
+      alt={selectedPlanet.name}
+      class="planet-image"
+    />
   </div>
 
-  <MediaQuery query="(min-width: 769px)" let:matches>
-    {#if matches}
-      <Tabs {tabs} bind:selectedTab />
-    {/if}
-  </MediaQuery>
-</div>
+  <div class="blub-outer-container">
+    <div class="blurb-container">
+      <h2>{selectedPlanet.name}</h2>
+      <p>{selectedPlanet.overview.content}</p>
+      <div class="source">
+        <h3>
+          Source: <a href="http://www.wikipedia.org"
+            >Wikipedia <img src="./img/icon-source.svg" alt="Wikipedia" /></a
+          >
+        </h3>
+      </div>
+    </div>
 
-<NumericInfo {selectedPlanet} />
+    <MediaQuery query="(min-width: 769px)" let:matches>
+      {#if matches}
+        <Tabs {tabs} bind:selectedTab planetColor={selectedPlanet.color} />
+      {/if}
+    </MediaQuery>
+  </div>
+
+  <NumericInfo {selectedPlanet} />
+</main>
 
 <style>
-  .container {
+  main {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .image-container {
     margin: 0 1.5rem;
     height: 19rem;
     display: flex;

@@ -19,7 +19,6 @@
 
 <style>
   div {
-    background-color: #070724;
     position: absolute;
     padding: 0;
     margin: 0;
@@ -32,5 +31,6 @@
   ul {
     padding-top: 1.5rem;
     list-style: none;
+    background-color: #070724;
   }
 </style>

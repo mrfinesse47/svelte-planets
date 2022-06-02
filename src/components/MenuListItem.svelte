@@ -40,6 +40,7 @@
     list-style: none;
     padding-bottom: 19px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 5;
   }
   li:hover {
     cursor: pointer;

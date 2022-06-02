@@ -4,13 +4,14 @@
   function select(e) {
     selectedTab = e.target.id;
   }
+  export let planetColor;
 </script>
 
 <ul>
   {#each tabs as tab}
     <li
       id={tab}
-      class={tab === selectedTab && "selected"}
+      style={tab === selectedTab && `border-bottom: 4px solid ${planetColor};`}
       on:click={(e) => select(e)}
     >
       {tab}
@@ -33,12 +34,9 @@
     text-align: center;
     letter-spacing: 0.1205rem;
     text-transform: uppercase;
-    padding: 20px 0.2rem 17px;
+    padding: 1.25rem 3.2px 1.0625rem;
   }
   li:hover {
     cursor: pointer;
-  }
-  li.selected {
-    border-bottom: 4px solid #419ebb;
   }
 </style>
