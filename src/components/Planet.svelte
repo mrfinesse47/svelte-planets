@@ -3,6 +3,7 @@
   import Tabs from "../shared/Tabs.svelte";
   let tabs = ["overview", "structure", "geology"];
   let selectedTab;
+  console.log(selectedPlanet);
 </script>
 
 <Tabs {tabs} bind:selectedTab />
@@ -19,8 +20,19 @@
   <h2>{selectedPlanet.name}</h2>
   <p>{selectedPlanet.overview.content}</p>
   <div class="source">
-    <h3>Source: <a href="http://www.wikipedia.org">Wikipedia</a></h3>
+    <h3>
+      Source: <a href="http://www.wikipedia.org"
+        >Wikipedia <img src="./img/icon-source.svg" alt="Wikipedia" /></a
+      >
+    </h3>
   </div>
+</div>
+
+<div class="numeric-info">
+  <div class="rotation-time">{selectedPlanet.rotation}</div>
+  <div class="revolution-time">{selectedPlanet.revolution}</div>
+  <div class="radius">{selectedPlanet.radius}</div>
+  <div class="average-temp">{selectedPlanet.temperature}</div>
 </div>
 
 <style>
@@ -57,5 +69,11 @@
     text-decoration: none;
     font-weight: 700;
     color: #fff;
+  }
+  .numeric-info {
+    display: flex;
+  }
+  .numeric-info div {
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 </style>
