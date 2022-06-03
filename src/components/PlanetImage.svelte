@@ -17,6 +17,14 @@
     alt={selectedPlanet.name}
     class="planet-image"
   />
+
+  {#if selectedTab === "geology"}
+    <img
+      src={`./img/geology-${selectedPlanet.name}.png`}
+      alt={selectedPlanet.name}
+      class="geology-img"
+    />
+  {/if}
 </div>
 
 <style>
@@ -26,8 +34,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
   }
+
   .planet-image {
     transform: scale(0.38487973);
+  }
+  .geology-img {
+    position: absolute;
+    width: 6.4638rem;
+    height: 7.875rem;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
   }
 </style>
