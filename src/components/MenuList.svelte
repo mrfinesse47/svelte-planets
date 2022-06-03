@@ -33,4 +33,17 @@
     list-style: none;
     background-color: #070724;
   }
+
+  @media screen and (min-width: 768px) {
+    div {
+      position: static;
+      width: auto;
+      height: auto;
+      top: auto;
+    }
+    ul {
+      padding: 0;
+      display: flex;
+    }
+  }
 </style>

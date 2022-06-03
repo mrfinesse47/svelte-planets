@@ -50,4 +50,9 @@
     text-transform: uppercase;
     margin-left: 1.25rem;
   }
+  @media screen and (min-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  }
 </style>

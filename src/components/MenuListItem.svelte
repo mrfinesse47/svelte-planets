@@ -60,4 +60,10 @@
     border-radius: 50%;
     margin-right: 1.5625rem;
   }
+
+  @media screen and (min-width: 768px) {
+    li {
+      border-bottom: none;
+    }
+  }
 </style>
