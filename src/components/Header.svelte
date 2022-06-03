@@ -1,5 +1,6 @@
 <script>
   import MenuList from "./MenuList.svelte";
+  import MediaQuery from "../shared/MediaQuery.svelte";
   export let planets;
   export let isMenuOpen; //bound one level up at app
 
@@ -11,8 +12,13 @@
 <header>
   <div class="container">
     <h1>THE PLANETS</h1>
-    <MenuList {planets} {isMenuOpen} on:planetSelect />
-    <img src="./img/icon-hamburger.svg" alt="menu" on:click={toggleMenu} />
+    <MediaQuery query="(max-width: 767px)">
+      <MenuList {planets} {isMenuOpen} on:planetSelect />
+      <img src="./img/icon-hamburger.svg" alt="menu" on:click={toggleMenu} />
+    </MediaQuery>
+    <MediaQuery query="(min-width: 768px)">
+      <MenuList {planets} isMenuOpen={true} on:planetSelect />
+    </MediaQuery>
   </div>
 </header>
 
