@@ -14,7 +14,7 @@
 </MediaQuery>
 
 <main>
-  <PlanetImage {selectedPlanet} />
+  <PlanetImage {selectedPlanet} {selectedTab} />
   <Blurb {selectedPlanet} {selectedTab}>
     <MediaQuery query="(min-width: 768px)">
       <Tabs {tabs} bind:selectedTab planetColor={selectedPlanet.color} />

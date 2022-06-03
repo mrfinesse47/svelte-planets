@@ -1,10 +1,19 @@
 <script>
   export let selectedPlanet;
+  export let selectedTab;
+  const determineImageSrc = (selectedTab, selectedPlanet) => {
+    if (selectedTab === "overview" || selectedTab === "geology") {
+      return `./img/planet-${selectedPlanet.name.toLowerCase()}.svg`;
+    }
+    if (selectedTab === "structure") {
+      return `./img/planet-${selectedPlanet.name.toLowerCase()}-internal.svg`;
+    }
+  };
 </script>
 
 <div class="image-container">
   <img
-    src={`./img/planet-${selectedPlanet.name.toLowerCase()}.svg`}
+    src={determineImageSrc(selectedTab, selectedPlanet)}
     alt={selectedPlanet.name}
     class="planet-image"
   />
