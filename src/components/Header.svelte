@@ -51,8 +51,14 @@
     margin-left: 1.25rem;
   }
   @media screen and (min-width: 768px) {
+    h1 {
+      margin: 0;
+      margin-bottom: 2.4375rem;
+    }
     .container {
       flex-direction: column;
+      padding-top: 2rem;
+      padding-bottom: 1.6875rem;
     }
   }
 </style>

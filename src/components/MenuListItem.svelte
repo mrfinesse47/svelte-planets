@@ -67,6 +67,13 @@
       margin: 0;
       padding: 0;
     }
+    li p {
+      font-weight: 700;
+      font-size: 0.6875rem;
+      line-height: 1.5625rem;
+      letter-spacing: 0.0625rem;
+      opacity: 0.75;
+    }
     .planet-color-circle {
       display: none;
     }
