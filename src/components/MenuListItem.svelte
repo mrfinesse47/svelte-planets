@@ -64,6 +64,14 @@
   @media screen and (min-width: 768px) {
     li {
       border-bottom: none;
+      margin: 0;
+      padding: 0;
+    }
+    .planet-color-circle {
+      display: none;
+    }
+    .chevron {
+      display: none;
     }
   }
 </style>

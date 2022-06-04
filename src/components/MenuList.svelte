@@ -37,13 +37,16 @@
   @media screen and (min-width: 768px) {
     div {
       position: static;
-      width: auto;
+      width: 100%;
       height: auto;
       top: auto;
+      margin: 0;
+      padding: 0 3.25rem;
     }
     ul {
       padding: 0;
       display: flex;
+      justify-content: space-between;
     }
   }
 </style>
