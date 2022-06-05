@@ -43,4 +43,10 @@
     font-weight: 700;
     color: #fff;
   }
+
+  @media screen and (min-width: 768px) {
+    .blub-outer-container {
+      display: flex;
+    }
+  }
 </style>

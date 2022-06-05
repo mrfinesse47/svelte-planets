@@ -61,7 +61,7 @@
     margin-right: 1.5625rem;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 767px) {
     li {
       border-bottom: none;
       margin: 0;
