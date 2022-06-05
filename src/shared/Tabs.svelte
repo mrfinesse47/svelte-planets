@@ -52,13 +52,18 @@
     ul {
       flex-direction: column;
       width: 40.783%;
+      height: 9.5rem;
       margin: 0;
       margin-top: 56px;
       border-bottom: none;
-      justify-content: center;
+      justify-content: space-between;
     }
     li:hover {
       background-color: #d8d8d8;
+    }
+    li {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 14px 87px 14px 50px;
     }
   }
 </style>

@@ -15,7 +15,7 @@
   <div class="left-container">
     <div
       class="planet-color-circle"
-      style={`background-color:${planet.color};`}
+      style={`background-color:${planet.menucolor};`}
     />
     <p>{planet.name}</p>
   </div>

@@ -56,7 +56,7 @@
       transform: scale(0.63448276);
     }
     .geology-img {
-      top: 62.5%;
+      top: 64%;
     }
   }
 </style>
