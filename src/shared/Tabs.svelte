@@ -2,11 +2,10 @@
   import MediaQuery from "../shared/MediaQuery.svelte";
   export let tabs;
   export let selectedTab;
+  export let planetColor;
   function select(e) {
     selectedTab = e.target.id;
   }
-
-  export let planetColor;
 </script>
 
 <ul>
@@ -16,9 +15,10 @@
         id={tab}
         style={tab === selectedTab && matches
           ? `border-bottom: 4px solid ${planetColor};`
-          : !matches &&
-            tab === selectedTab &&
-            `background-color:${planetColor}`}
+          : tab === selectedTab &&
+            !matches &&
+            `background-color:${planetColor};
+            `}
         on:click={(e) => select(e)}
       >
         {tab}
@@ -47,6 +47,7 @@
   li:hover {
     cursor: pointer;
   }
+
   @media screen and (min-width: 767px) {
     ul {
       flex-direction: column;
@@ -55,6 +56,9 @@
       margin-top: 56px;
       border-bottom: none;
       justify-content: center;
+    }
+    li:hover {
+      background-color: #d8d8d8;
     }
   }
 </style>
