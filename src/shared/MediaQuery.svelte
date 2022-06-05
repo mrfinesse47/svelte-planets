@@ -36,6 +36,4 @@
   }
 </script>
 
-{#if matches}
-  <slot />
-{/if}
+<slot {matches} />

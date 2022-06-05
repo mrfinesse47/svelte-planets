@@ -48,6 +48,7 @@
     .blub-outer-container {
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
     }
     .blurb-container {
       width: 49%;

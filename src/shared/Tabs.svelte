@@ -1,4 +1,5 @@
 <script>
+  import MediaQuery from "../shared/MediaQuery.svelte";
   export let tabs;
   export let selectedTab;
   function select(e) {
@@ -9,13 +10,16 @@
 
 <ul>
   {#each tabs as tab}
-    <li
-      id={tab}
-      style={tab === selectedTab && `border-bottom: 4px solid ${planetColor};`}
-      on:click={(e) => select(e)}
-    >
-      {tab}
-    </li>
+    <MediaQuery query="(max-width: 767px)" let:matches>
+      <li
+        id={tab}
+        style={tab === selectedTab &&
+          `border-bottom: 4px solid ${planetColor};`}
+        on:click={(e) => select(e)}
+      >
+        {tab}
+      </li>
+    </MediaQuery>
   {/each}
 </ul>
 
@@ -44,6 +48,9 @@
       flex-direction: column;
       width: 40.783%;
       margin: 0;
+      margin-top: 56px;
+      border-bottom: none;
+      justify-content: center;
     }
   }
 </style>

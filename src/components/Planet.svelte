@@ -9,15 +9,19 @@
   let selectedTab = tabs[0];
 </script>
 
-<MediaQuery query="(max-width: 767px)">
-  <Tabs {tabs} bind:selectedTab planetColor={selectedPlanet.color} />
+<MediaQuery query="(max-width: 767px)" let:matches>
+  {#if matches}
+    <Tabs {tabs} bind:selectedTab planetColor={selectedPlanet.color} />
+  {/if}
 </MediaQuery>
 
 <main>
   <PlanetImage {selectedPlanet} {selectedTab} />
   <Blurb {selectedPlanet} {selectedTab}>
-    <MediaQuery query="(min-width: 768px)">
-      <Tabs {tabs} bind:selectedTab planetColor={selectedPlanet.color} />
+    <MediaQuery query="(min-width: 768px)" let:matches>
+      {#if matches}
+        <Tabs {tabs} bind:selectedTab planetColor={selectedPlanet.color} />
+      {/if}
     </MediaQuery>
   </Blurb>
   <NumericInfo {selectedPlanet} />

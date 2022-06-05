@@ -12,12 +12,16 @@
 <header>
   <div class="container">
     <h1>THE PLANETS</h1>
-    <MediaQuery query="(max-width: 767px)">
-      <MenuList {planets} {isMenuOpen} on:planetSelect />
-      <img src="./img/icon-hamburger.svg" alt="menu" on:click={toggleMenu} />
+    <MediaQuery query="(max-width: 767px)" let:matches>
+      {#if matches}
+        <MenuList {planets} {isMenuOpen} on:planetSelect />
+        <img src="./img/icon-hamburger.svg" alt="menu" on:click={toggleMenu} />
+      {/if}
     </MediaQuery>
-    <MediaQuery query="(min-width: 768px)">
-      <MenuList {planets} isMenuOpen={true} on:planetSelect />
+    <MediaQuery query="(min-width: 768px)" let:matches>
+      {#if matches}
+        <MenuList {planets} isMenuOpen={true} on:planetSelect />
+      {/if}
     </MediaQuery>
   </div>
 </header>
