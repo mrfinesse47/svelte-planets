@@ -5,6 +5,7 @@
   function select(e) {
     selectedTab = e.target.id;
   }
+
   export let planetColor;
 </script>
 
@@ -13,8 +14,11 @@
     <MediaQuery query="(max-width: 767px)" let:matches>
       <li
         id={tab}
-        style={tab === selectedTab &&
-          `border-bottom: 4px solid ${planetColor};`}
+        style={tab === selectedTab && matches
+          ? `border-bottom: 4px solid ${planetColor};`
+          : !matches &&
+            tab === selectedTab &&
+            `background-color:${planetColor}`}
         on:click={(e) => select(e)}
       >
         {tab}
