@@ -48,4 +48,15 @@
     transform: translateX(-50%);
     top: 50%;
   }
+  @media screen and (min-width: 767px) {
+    .image-container {
+      height: 30.5rem;
+    }
+    .planet-image {
+      transform: scale(0.63448276);
+    }
+    .geology-img {
+      top: 62.5%;
+    }
+  }
 </style>
