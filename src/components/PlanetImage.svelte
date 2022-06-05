@@ -48,9 +48,9 @@
     transform: translateX(-50%);
     top: 50%;
   }
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 768px) {
     .image-container {
-      height: 30.5rem;
+      height: 28.75rem;
     }
     .planet-image {
       transform: scale(0.63448276);

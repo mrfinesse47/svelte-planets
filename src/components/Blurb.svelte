@@ -19,12 +19,13 @@
 </div>
 
 <style>
-  .blurb-container h2 {
+  .blurb-container {
     text-align: center;
+  }
+  .blurb-container h2 {
     text-transform: uppercase;
   }
   .blurb-container p {
-    text-align: center;
     font-family: "spartan", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -34,7 +35,6 @@
   }
   .blurb-container h3 {
     opacity: 0.5;
-    text-align: center;
     margin-top: 2rem;
     font-weight: 400;
   }
@@ -45,13 +45,23 @@
   }
 
   @media screen and (min-width: 768px) {
+    .blurb-container {
+      text-align: left;
+    }
     .blub-outer-container {
+      height: 253px;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
     }
     .blurb-container {
       width: 49%;
+    }
+    .blurb-container p {
+      margin-top: 1.5rem;
+    }
+    .blurb-container h3 {
+      margin-top: 2rem;
     }
   }
 </style>

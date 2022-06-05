@@ -72,10 +72,13 @@
     opacity: 0.5;
     padding-top: 0.5rem;
   }
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 768px) {
     .numeric-info {
       flex-direction: row;
       justify-content: space-between;
+      margin: 0;
+      margin-top: 27px;
+      padding-bottom: 2.25rem;
     }
     .numeric-info > div {
       width: 164px;
