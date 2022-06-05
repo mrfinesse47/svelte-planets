@@ -47,6 +47,10 @@
   @media screen and (min-width: 768px) {
     .blub-outer-container {
       display: flex;
+      justify-content: space-between;
+    }
+    .blurb-container {
+      width: 49%;
     }
   }
 </style>

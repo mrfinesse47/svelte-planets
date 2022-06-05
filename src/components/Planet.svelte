@@ -28,4 +28,10 @@
     max-width: 450px;
     margin: 0 auto;
   }
+  @media screen and (min-width: 767px) {
+    main {
+      max-width: 100%;
+      margin: 0 2.4375rem;
+    }
+  }
 </style>

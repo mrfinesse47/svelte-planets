@@ -39,4 +39,11 @@
   li:hover {
     cursor: pointer;
   }
+  @media screen and (min-width: 767px) {
+    ul {
+      flex-direction: column;
+      width: 40.783%;
+      margin: 0;
+    }
+  }
 </style>
