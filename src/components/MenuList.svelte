@@ -49,4 +49,10 @@
       justify-content: space-between;
     }
   }
+  @media screen and (min-width: 1440px) {
+    div {
+      padding: 0 2.5rem;
+      width: 41.5625rem;
+    }
+  }
 </style>

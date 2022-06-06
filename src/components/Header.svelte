@@ -65,4 +65,17 @@
       padding-bottom: 1.6875rem;
     }
   }
+  @media screen and (min-width: 1440px) {
+    .container {
+      flex-direction: row;
+      align-items: center;
+      padding-top: 1.375rem;
+      padding-bottom: 1.6875rem;
+    }
+    h1 {
+      align-self: center;
+      margin: 0;
+      padding-left: 2rem;
+    }
+  }
 </style>

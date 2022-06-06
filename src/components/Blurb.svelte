@@ -49,8 +49,7 @@
       text-align: left;
     }
     .blub-outer-container {
-      height: 253px;
-
+      height: 15.8125rem;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -70,9 +69,23 @@
       width: auto;
     }
     .blub-outer-container {
+      margin-top: 7.875rem;
+      margin-bottom: 87px;
       width: 21.875rem;
+      height: 33.875rem;
       flex-direction: column;
       align-items: flex-end;
+    }
+    .blurb-container h2 {
+      font-size: 80px;
+    }
+    .blurb-container h3 {
+      margin-top: 0;
+      line-height: 1.5625rem;
+    }
+    .blurb-container p {
+      line-height: 1.5625rem;
+      font-size: 0.875rem;
     }
   }
 </style>

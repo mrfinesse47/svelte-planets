@@ -91,7 +91,8 @@
   }
   @media screen and (min-width: 1440px) {
     li {
-      width: 350px;
+      width: 21.875rem;
+      margin-bottom: 1rem;
     }
   }
 </style>
