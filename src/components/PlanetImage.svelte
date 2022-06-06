@@ -20,7 +20,7 @@
 
   {#if selectedTab === "geology"}
     <img
-      src={`./img/geology-${selectedPlanet.name}.png`}
+      src={`./img/geology-${selectedPlanet.name.toLowerCase()}.png`}
       alt={selectedPlanet.name}
       class="geology-img"
     />
