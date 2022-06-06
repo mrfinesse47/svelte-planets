@@ -9,7 +9,7 @@
 </script>
 
 <ul>
-  {#each tabs as tab}
+  {#each tabs as tab, i}
     <MediaQuery query="(max-width: 767px)" let:matches>
       <li
         id={tab}
@@ -21,7 +21,14 @@
             `}
         on:click={(e) => select(e)}
       >
-        {tab}
+        {#if matches}
+          {tab}
+        {:else}
+          <div class="mini-container">
+            <div class="number">{`0${i}`}</div>
+            <div class="text">{tab}</div>
+          </div>
+        {/if}
       </li>
     </MediaQuery>
   {/each}
@@ -51,7 +58,7 @@
   @media screen and (min-width: 768px) {
     ul {
       flex-direction: column;
-      width: 40.783%;
+      padding: 0;
       height: 9.5rem;
       margin: 0;
       margin-top: 56px;
@@ -62,8 +69,21 @@
       background-color: #d8d8d8;
     }
     li {
+      width: 281px;
+      height: 40px;
       border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 14px 87px 14px 50px;
+      line-height: 25px;
+      display: flex;
+    }
+    .mini-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .mini-container .number {
+      padding-left: 1.25rem;
+      padding-right: 1.0625rem;
+      opacity: 0.5;
     }
   }
 </style>
