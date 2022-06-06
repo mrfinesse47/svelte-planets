@@ -59,4 +59,14 @@
       top: 64%;
     }
   }
+  @media screen and (min-width: 1440px) {
+    .planet-image {
+      transform: scale(1);
+    }
+    .image-container {
+      height: 47.125rem;
+      width: 582px;
+      margin: 0;
+    }
+  }
 </style>
