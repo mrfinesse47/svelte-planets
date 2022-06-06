@@ -4,7 +4,10 @@
   export let selectedTab;
   export let planetColor;
   function select(e) {
-    selectedTab = e.target.id;
+    let t = e.target;
+    while (t && !t.id) t = t.parentNode;
+    //event bubble until parent id found
+    selectedTab = t.id;
   }
 </script>
 
