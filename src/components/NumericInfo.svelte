@@ -77,15 +77,23 @@
       flex-direction: row;
       justify-content: space-between;
       margin: 0;
-      margin-top: 27px;
+      margin-top: 1.6875rem;
       padding-bottom: 2.25rem;
     }
     .numeric-info > div {
-      width: 164px;
+      width: 10.25rem;
       padding: 0;
     }
     .numeric-info .inner-container {
       flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+
+      padding: 1rem 3.25rem 1.1875rem 0.9375rem;
+    }
+    .numeric-info .value {
+      margin-top: 0.375rem;
+      font-size: 1.5rem;
     }
   }
 </style>
