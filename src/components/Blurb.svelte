@@ -50,6 +50,7 @@
     }
     .blub-outer-container {
       height: 253px;
+
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -62,6 +63,16 @@
     }
     .blurb-container h3 {
       margin-top: 2rem;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .blurb-container {
+      width: auto;
+    }
+    .blub-outer-container {
+      width: 21.875rem;
+      flex-direction: column;
+      align-items: flex-end;
     }
   }
 </style>

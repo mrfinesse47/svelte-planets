@@ -89,4 +89,9 @@
       opacity: 0.5;
     }
   }
+  @media screen and (min-width: 1440px) {
+    li {
+      width: 350px;
+    }
+  }
 </style>

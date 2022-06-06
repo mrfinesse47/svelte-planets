@@ -16,14 +16,16 @@
 </MediaQuery>
 
 <main>
-  <PlanetImage {selectedPlanet} {selectedTab} />
-  <Blurb {selectedPlanet} {selectedTab}>
-    <MediaQuery query="(min-width: 768px)" let:matches>
-      {#if matches}
-        <Tabs {tabs} bind:selectedTab planetColor={selectedPlanet.color} />
-      {/if}
-    </MediaQuery>
-  </Blurb>
+  <div>
+    <PlanetImage {selectedPlanet} {selectedTab} />
+    <Blurb {selectedPlanet} {selectedTab}>
+      <MediaQuery query="(min-width: 768px)" let:matches>
+        {#if matches}
+          <Tabs {tabs} bind:selectedTab planetColor={selectedPlanet.color} />
+        {/if}
+      </MediaQuery>
+    </Blurb>
+  </div>
   <NumericInfo {selectedPlanet} />
 </main>
 
@@ -36,6 +38,17 @@
     main {
       max-width: 100%;
       margin: 0 2.4375rem;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    main {
+      max-width: 69.375rem;
+      margin: 0 auto;
+    }
+    main > div {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
     }
   }
 </style>

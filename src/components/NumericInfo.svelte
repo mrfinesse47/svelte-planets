@@ -39,6 +39,7 @@
 
 <style>
   .numeric-info {
+    max-width: 69.375rem;
     margin-top: 1.75rem;
     display: flex;
     flex-direction: column;
@@ -76,7 +77,7 @@
     .numeric-info {
       flex-direction: row;
       justify-content: space-between;
-      margin: 0;
+      margin: 0 auto;
       margin-top: 1.6875rem;
       padding-bottom: 2.25rem;
     }
