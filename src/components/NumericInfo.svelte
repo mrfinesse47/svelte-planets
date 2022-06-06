@@ -93,8 +93,16 @@
       padding: 1rem 3.25rem 1.1875rem 0.9375rem;
     }
     .numeric-info .value {
+      width: 9.6875rem;
       margin-top: 0.375rem;
       font-size: 1.5rem;
+      letter-spacing: -0.9px;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .numeric-info {
+      padding-top: 0;
+      margin-top: 0;
     }
   }
 </style>

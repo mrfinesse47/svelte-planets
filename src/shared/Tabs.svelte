@@ -90,8 +90,13 @@
     }
   }
   @media screen and (min-width: 1440px) {
+    ul {
+      margin: 0;
+      height: auto;
+    }
     li {
       width: 21.875rem;
+      height: 48px;
       margin-bottom: 1rem;
     }
   }

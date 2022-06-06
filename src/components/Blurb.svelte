@@ -53,6 +53,8 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      max-width: 800px;
+      margin: 0 auto;
     }
     .blurb-container {
       width: 49%;
@@ -69,11 +71,13 @@
       width: auto;
     }
     .blub-outer-container {
+      margin: 0;
       margin-top: 7.875rem;
       margin-bottom: 87px;
       width: 21.875rem;
       height: 33.875rem;
       flex-direction: column;
+      justify-content: space-between;
       align-items: flex-end;
     }
     .blurb-container h2 {
@@ -86,6 +90,7 @@
     .blurb-container p {
       line-height: 1.5625rem;
       font-size: 0.875rem;
+      margin-bottom: 1.5rem;
     }
   }
 </style>

@@ -69,4 +69,11 @@
       margin: 0;
     }
   }
+  @media screen and (min-width: 1440px) {
+    .geology-img {
+      top: 60.5%;
+      width: 10.1875rem;
+      height: 12.4375rem;
+    }
+  }
 </style>
