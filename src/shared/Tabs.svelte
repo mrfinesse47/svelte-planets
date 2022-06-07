@@ -18,10 +18,10 @@
         id={tab}
         style={tab === selectedTab && matches
           ? `border-bottom: 4px solid ${planetColor};`
-          : tab === selectedTab &&
-            !matches &&
-            `background-color:${planetColor};
-            `}
+          : tab === selectedTab && !matches
+          ? `background-color:${planetColor};
+            `
+          : undefined}
         on:click={(e) => select(e)}
       >
         {#if matches}

@@ -10,7 +10,10 @@
     <div class="source">
       <h3>
         Source: <a href="http://www.wikipedia.org"
-          >Wikipedia <img src="./img/icon-source.svg" alt="Wikipedia" /></a
+          >Wikipedia <img
+            src="./img/icon-source.svg"
+            alt="Reference Material"
+          /></a
         >
       </h3>
     </div>
