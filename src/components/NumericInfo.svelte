@@ -104,5 +104,25 @@
       padding-top: 0;
       margin-top: 0;
     }
+    .numeric-info > div {
+      width: 15.9375rem;
+      height: 8rem;
+    }
+    .numeric-info .inner-container {
+      padding: 1.25rem 6rem 1.6875rem 1.4375rem;
+    }
+    .numeric-info .value {
+      margin-top: 0.25rem;
+      font-size: 2.5rem;
+      line-height: 3.25rem;
+      letter-spacing: -0.0938rem;
+    }
+    .numeric-info .title {
+      padding-top: 0;
+      font-size: 0.6875rem;
+      line-height: 1.5625rem;
+      letter-spacing: 0.0625rem;
+      opacity: 0.5;
+    }
   }
 </style>
