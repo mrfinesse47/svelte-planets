@@ -40,7 +40,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://mrfinesse47.github.io/svelte-planets/)
+- Live Site URL: (https://mrfinesse47.github.io/svelte-planets/)
 
 ## My process
 
